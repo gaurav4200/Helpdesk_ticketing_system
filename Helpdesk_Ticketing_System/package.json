@@ -1,0 +1,47 @@
+{
+  "name": "webams",
+  "version": "1.0.0",
+  "description": "ticketing tool web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniketdvd/webams.git"
+  },
+  "author": "aniketdvd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniketdvd/webams/issues"
+  },
+  "homepage": "https://github.com/aniketdvd/webams#readme",
+  "keywords": [
+    "node",
+    "javascript",
+    "nodejs",
+    "ticketing",
+    "helpdesk",
+    "tool"
+  ],
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "chalk": "^3.0.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
+    "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "nodemon": "^1.19.3"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}

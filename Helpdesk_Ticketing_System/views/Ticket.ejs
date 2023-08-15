@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <%- include partials/Meta.ejs %>
+    <%- include partials/LinkResources.ejs %>
+    <title>Review ticket</title>
+</head>
+<body>
+    <%- include partials/NavLoggedIn.ejs %>
+    <main>
+      <form action="/updateTicket?tid=<%=tickets[eth].ticketid%>" method="POST" class="container">
+        <h1>Reviewing Incident id: <span class="light"><%=tickets[eth].ticketid%></span></h1>
+          <p class="separator">
+          <div class="review-left left">
+            <div>
+              <h4>
+                Issue
+              </h4>
+              <%=tickets[eth].title%>
+              <h4>
+                Read description
+              </h4>
+              <%=tickets[eth].description%>
+            </div>
+            <div>
+              <select name="changeStatus">
+                <option><%=tickets[eth].status%></option>
+                <option>Assigned</option>
+                <option>In progress</option>
+                <option>Won't fix</option>
+                <option>Resolved</option>
+              </select>
+            </div>
+            <div>
+              <select name="changePriority">
+                <option><%=tickets[eth].priority%></option>
+                <option>Low</option>
+                <option>Normal</option>
+                <option>Important</option>
+                <option>Critical</option>
+                <option>Extreme</option>
+              </select>
+            </div>
+            <button type="submit">Update Incident</button>
+            <a href="/">Cancel</a> 
+          </div>
+          <div class="review-right right">
+            <div>
+              <div>Reported on : <%=tickets[eth].date%></div>
+              <div>Reported at : <%=tickets[eth].time%></div>
+            </div>
+          </div>  
+        </form>
+    </main>
+    <%- include partials/Footer.ejs %>
+</body>
+</html>

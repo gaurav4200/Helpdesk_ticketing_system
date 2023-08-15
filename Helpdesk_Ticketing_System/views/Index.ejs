@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+      <%- include partials/Meta.ejs %>
+      <%- include partials/LinkResources.ejs %>
+    <title>WebAMS dashboard | <%=name%></title>
+  </head>
+  <body>
+      <%- include partials/NavLoggedIn.ejs %>
+    <header>Welcome to your WebAMS dashboard, <%=name%>.
+      <br>
+      Here are a couple of things we can help you with.
+    </header>
+    <main>
+      <form action="/report">
+        <div class="action-card" onclick="javascript:this.parentNode.submit();">
+          <div class="action-card--icon">
+            <img src="/static/img/newticket.svg" alt="">
+          </div>
+          <div class="action-card--title">
+            Report an Incident
+          </div>
+          <div class="action-card--subtitle">
+            Generate a new ticket for an Incident
+          </div>
+        </div>
+      </form>
+
+      <form action="/history" method="POST">
+        <div class="action-card" onclick="javascript:this.parentNode.submit();">
+          <div class="action-card--icon">
+            <img src="/static/img/previoustickets.svg" alt="">
+          </div>
+          <div class="action-card--title">
+            Previous Incidents
+          </div>
+          <div class="action-card--subtitle">
+            Incidents reported earlier
+          </div>
+        </div>
+      </form>
+
+      <form action="/feedback" method="POST">
+        <div class="action-card--disabled" onclick="javascript:this.parentNode.submit();">
+          <div class="action-card--icon">
+              <img src="/static/img/feedback.svg" alt="">
+          </div>
+          <div class="action-card--title">
+            Feedback
+          </div>
+          <div class="action-card--subtitle">
+            Generate an honest feedback for supporting team
+          </div>
+        </div>
+      </form>
+    </main>
+    <%- include partials/Footer.ejs %>
+  </body>
+</html>

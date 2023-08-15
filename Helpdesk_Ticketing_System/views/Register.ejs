@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+      <%- include partials/Meta.ejs %>
+      <%- include partials/LinkResources.ejs %>
+    <title>WebAMS registration</title>
+  </head>
+  <body onload="haha()">
+      <%- include partials/NavLoggedOut.ejs %>
+    <main>
+      <div class="register-form">
+      <form action="/register" method="POST" onsubmit= "return checkpassword(this)">
+        <h1 class="heading">Register</h1>
+           <p> <input type="text" id="name" placeholder="Name" name="name" required></p>
+           <p><input type="email" id="email" placeholder="email" name="email" required></p>
+           <p> <input type="password" id="password" placeholder="password" name="password" required></p>
+           <p><input type="password" id="confirmPassword" placeholder="confirmPassword" name="confirmPassword" required></p>
+        <button type="submit">Register</button>
+        <a href="/login"> Already have an account? Login</a>
+      </form>
+      <blockquote> Account creation involves verification by
+        <br>support, which may take time. You will be
+         <br>informed once your account is ready to use.
+      </blockquote>
+    </div>
+    </main>
+    <%- include partials/Footer.ejs %>
+  </body>
+    <script src="/static/js/validateInput.js"></script>
+</html>

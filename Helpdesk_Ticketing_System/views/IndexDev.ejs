@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+      <%- include partials/Meta.ejs %>
+      <%- include partials/LinkResources.ejs %>
+    <title>WebAMS dashboard | Support</title>
+  </head>
+  <body>
+      <%- include partials/NavLoggedIn.ejs %>
+    <header>Welcome to your WebAMS dashboard, <%=name%>.
+      <br>
+      Here are a couple of things we can help you with.
+    </header>
+    <main>
+        <form action="/issues" method="POST">
+          <div class="action-card" onclick="javascript:this.parentNode.submit();">
+            <div class="action-card--icon">
+              <img src="/static/img/newticket.svg" alt="">
+            </div>
+            <div class="action-card--title">
+              See the tickets and active issues
+            </div>
+            <div class="action-card--subtitle">
+              Work on the issues on the way to fix.
+            </div>
+          </div>
+        </form>
+    
+        <form action="/history" method="POST">
+          <div class="action-card" onclick="javascript:this.parentNode.submit();">
+            <div class="action-card--icon">
+              <img src="/static/img/previoustickets.svg" alt="">
+            </div>
+            <div class="action-card--title">
+              Previous Incidents
+            </div>
+            <div class="action-card--subtitle">
+              Incidents reported earlier
+            </div>
+          </div>
+        </form>
+    
+        <form action="/feedbackrec" method="POST">
+          <div class="action-card--disabled" onclick="javascript:this.parentNode.submit();">
+            <div class="action-card--icon">
+              <img src="/static/img/feedback.svg" alt="">
+            </div>
+            <div class="action-card--title">
+              Feedback
+            </div>
+            <div class="action-card--subtitle">
+              View the feedbacks by your clients and customers around the globe.
+            </div>
+          </div>
+        </form>
+    </main>
+   <%- include partials/Footer.ejs %>
+  </body>
+</html>
